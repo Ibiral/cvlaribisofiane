@@ -1,0 +1,396 @@
+body 
+{
+    border: 1px solid #fec907;
+    display: grid;
+    grid-template-areas: "entete entete"
+                         " lateral principal";
+    max-width: 900px;
+    margin: auto;
+    font-size: 1em;
+    font-family: "Arial", "Trebuchet MS", sans-serif;
+}
+
+/*HEADER*/
+
+header 
+{
+    grid-area: entete;
+    display: flex;
+}
+
+h1
+{
+    font-size: 2.5em;
+    margin-bottom: -10px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+header h2::after {
+    content: " ";
+    height: 2px;
+    width: 65px;
+    background-color: #fec907;
+    display: block;
+}
+
+.photo_contour
+{
+    grid-area: photo;
+    display: flex;
+    order: 1;
+    min-width: 270px;
+    margin: 0 50px 0 0 ;
+    justify-content: center;
+    background-color: #fec907;  
+}
+
+.photo
+{
+	max-width: 200px;
+	border:solid 4px #ac9037;
+    border-radius: 50%;
+    text-align: center;
+    margin:20px; 
+}
+
+.nom
+{
+    grid-area: nom;
+    order: 2;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.prenom
+{
+	color: #fec907;
+}
+
+/*MAIN*/
+
+main
+{
+    grid-area: principal;
+    padding: 0px 30px 0px 40px;
+}
+
+h2
+{
+    font-size: 1.5em;
+}
+
+.ligne
+{
+	display: flex;
+	width: 95%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-bottom: 2px solid #fec907;
+}
+
+h2.form:before 
+{
+    font-family: "Font Awesome 5 Free";
+    content: "\f19d";
+    margin-right: .5rem;
+    color: #fec907;
+}
+
+h2.exp:before
+{
+	font-family: "Font Awesome 5 Free";
+	content: "\f0b1";
+	margin-right: .5rem ;
+	color: #fec907 ;
+}
+
+h2.rec:before
+{
+	font-family: "Font Awesome 5 Free";
+	content: "\f303";
+	margin-right: .5rem ;
+	color: #fec907 ;
+}
+
+li
+{
+    display: flex;
+    list-style-type: none;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+
+.dot
+{
+    display: flex;
+    padding-top: 15px;
+}
+
+.dot .far
+{
+    color :#fec907;
+    font-size: 1em;
+    display: flex;
+    padding-right: 20px;
+}
+
+.dot .fas
+{
+    color :#fec907;
+    font-size: 0.7em;
+    display: flex;
+    padding-right: 25px;
+}
+
+.annee
+{
+    list-style-type: none;
+    font-size: 0.9em;
+}
+
+.annee p
+{
+    display: flex;
+    flex-direction: row;
+    width: 90px;
+    margin-bottom: -10px;
+}
+
+.ecole, .emploi
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.noms
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.p1
+{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+/*ASIDE*/
+
+aside
+{
+    grid-area: lateral;
+    max-width: 270px;
+    background-color: #fec907;
+}
+
+h3
+{
+    text-align: center;
+    width: 100%;
+    color: #fec907;
+	background-color: #444444;
+	padding: .5rem 0;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about p, .contact p, .loisirs p
+{
+	margin: 0;
+	padding: 1rem 1rem;
+}
+
+.contact p
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.about p
+{
+    padding: 0 1rem ;
+}
+
+.about
+{
+    margin-bottom: 450px;
+}
+
+#logos 
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+	background-color: #fec907;
+}
+
+#logos i
+{
+    font-size: 2.5em;
+    border: 1px black solid;
+    border-radius: 100%;
+    background-color: #fec907;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 768px)
+{
+body
+{
+    max-width: 768px;
+    width: auto;
+    font-size: 1.1em;
+    margin:0;
+    border:none;
+    grid-template-areas: "entete"
+                         "principal"
+                         " lateral";                 
+}
+
+/*HEADER RESPONSIVE*/
+
+.photo_contour
+{
+    margin: 0;
+}
+
+.photo
+{
+    max-width: 150px;
+    margin: 10px;
+}
+
+h1, header h2
+{
+    width: fit-content;
+}
+
+h1 
+{
+    margin-top: -30px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    padding-bottom: 10px;
+}
+
+.prenom
+{
+    padding-right: 10px;
+}
+
+/*MAIN RESPONSIVE*/
+
+main
+{
+    width: auto;
+    padding: 0px 30px 0px 0px;
+    order: 2;
+}
+
+ul 
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2 
+{
+    font-size: 1.25em;
+}
+
+.noms
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+.formation, .experience, .recommandations 
+{
+    width: auto;
+    margin-left: 10px;
+    margin-right: -20px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 8px #a5ae90;
+    border-radius: 5px;
+}
+
+li
+{
+    display: block;
+    text-align: justify;
+    padding: 0 10px 0 10px;
+}
+
+.annee 
+{
+    font-size: 1.1em;
+    padding-left: 20px;
+    position:relative;
+    top: -34px;
+}
+
+.annee p
+{
+    margin-bottom: -15px;
+    padding-left: 20px;
+}
+
+/*ASIDE RESPONSIVE*/
+
+aside
+{
+    max-width: none;
+    font-size: 0.9em;
+    order: 3;
+}
+
+h3 
+{
+    font-size: 1.25em;
+}
+
+.about
+{
+    margin: 0;
+}
+
+.about, .contact, .loisirs
+{
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #a5ae90;
+    box-shadow: 0px 0px 8px  white;
+    border-radius: 5px;
+}
+
+}
